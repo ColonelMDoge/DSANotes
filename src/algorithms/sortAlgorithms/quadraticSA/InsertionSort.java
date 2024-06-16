@@ -1,7 +1,6 @@
-package sortAlgorithms.quadraticSA;
+package algorithms.sortAlgorithms.quadraticSA;
 
-import sortAlgorithms.AlgorithmHelper;
-
+import algorithms.sortAlgorithms.*;
 /*
 The insertion sort algorithm is arguably the best O(n^2) sorting algorithm
 It is still easier to understand like the rest of the O(n^2) algorithms
@@ -38,12 +37,12 @@ public class InsertionSort {
         }
     }
     public static void main(String[] args) {
-        int[] unsortedArray = AlgorithmHelper.fillWithElements(1000,1,10);
-        AlgorithmHelper.printArray(unsortedArray, false);
-        AlgorithmHelper.startTime();
+        int[] unsortedArray = SortAlgorithmHelper.fillWithElements(1000,1,10);
+        SortAlgorithmHelper.printArray(unsortedArray, false);
+        SortAlgorithmHelper.startTime();
         insertionSort(unsortedArray);
-        AlgorithmHelper.endTime();
-        AlgorithmHelper.printArray(unsortedArray, true);
-        AlgorithmHelper.printRuntime();
+        SortAlgorithmHelper.endTime();
+        SortAlgorithmHelper.printArray(unsortedArray, true);
+        SortAlgorithmHelper.printRuntime();
     }
 }

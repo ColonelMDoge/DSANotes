@@ -1,6 +1,6 @@
-package sortAlgorithms.loglinearSA;
+package algorithms.sortAlgorithms.loglinearSA;
 
-import sortAlgorithms.AlgorithmHelper;
+import algorithms.sortAlgorithms.*;
 
 /*
 The merge sort algorithm is a popular divide and conquer sorting algorithm
@@ -53,12 +53,12 @@ public class MergeSort {
         if (end + 1 - start >= 0) System.arraycopy(temp, start, array, start, end + 1 - start);
     }
     public static void main(String[] args) {
-        int[] unsortedArray = AlgorithmHelper.fillWithElements(1000,1,10);
-        AlgorithmHelper.printArray(unsortedArray, false);
-        AlgorithmHelper.startTime();
+        int[] unsortedArray = SortAlgorithmHelper.fillWithElements(1000,1,10);
+        SortAlgorithmHelper.printArray(unsortedArray, false);
+        SortAlgorithmHelper.startTime();
         mergeSort(unsortedArray, 0 , unsortedArray.length - 1);
-        AlgorithmHelper.endTime();
-        AlgorithmHelper.printArray(unsortedArray, true);
-        AlgorithmHelper.printRuntime();
+        SortAlgorithmHelper.endTime();
+        SortAlgorithmHelper.printArray(unsortedArray, true);
+        SortAlgorithmHelper.printRuntime();
     }
 }

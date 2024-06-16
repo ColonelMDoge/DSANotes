@@ -1,6 +1,6 @@
-package sortAlgorithms;
+package algorithms.sortAlgorithms;
 
-public class AlgorithmHelper {
+public class SortAlgorithmHelper {
     private static long previousTime;
     public static int[] fillWithElements(int size, int from, int to) {
         int[] array = new int[size];

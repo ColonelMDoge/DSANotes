@@ -1,6 +1,6 @@
-package sortAlgorithms.polynomialSA;
+package algorithms.sortAlgorithms.polynomialSA;
 
-import sortAlgorithms.AlgorithmHelper;
+import algorithms.sortAlgorithms.*;
 
 /*
 The counting sort algorithm is an interesting approach to sorting without comparing values
@@ -42,13 +42,13 @@ public class CountingSort {
         System.arraycopy(outputArray, 0, array, 0, array.length);
     }
     public static void main(String[] args) {
-        int[] unsortedArray = AlgorithmHelper.fillWithElements(1000,1,10);
-        AlgorithmHelper.printArray(unsortedArray, false);
-        AlgorithmHelper.startTime();
+        int[] unsortedArray = SortAlgorithmHelper.fillWithElements(1000,1,10);
+        SortAlgorithmHelper.printArray(unsortedArray, false);
+        SortAlgorithmHelper.startTime();
         countingSort(unsortedArray);
-        AlgorithmHelper.endTime();
-        AlgorithmHelper.printArray(unsortedArray, true);
-        AlgorithmHelper.printRuntime();
+        SortAlgorithmHelper.endTime();
+        SortAlgorithmHelper.printArray(unsortedArray, true);
+        SortAlgorithmHelper.printRuntime();
     }
 }
 

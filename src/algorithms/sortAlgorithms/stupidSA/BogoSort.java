@@ -1,7 +1,7 @@
-package sortAlgorithms.stupidSA;
+package algorithms.sortAlgorithms.stupidSA;
 
-import sortAlgorithms.AlgorithmHelper;
-import java.util.*;
+import algorithms.sortAlgorithms.*;
+import java.util.Random;
 
 /*
 The bogo sort algorithm is one of the funny sorts, as it is known for being one of the worst sorting algorithms
@@ -27,7 +27,7 @@ Takes the timespan of the universe to sort a large array
 
 public class BogoSort {
     public static void bogoSort(int[] array) {
-        while(!AlgorithmHelper.isSorted(array)) {
+        while(!SortAlgorithmHelper.isSorted(array)) {
             // Fisher-Yates algorithm for shuffling an array
             Random random = new Random();
             for (int i = array.length - 1; i > 0; i--) {
@@ -39,12 +39,12 @@ public class BogoSort {
         }
     }
     public static void main(String[] args) {
-        int[] unsortedArray = AlgorithmHelper.fillWithElements(10,1,10);
-        AlgorithmHelper.printArray(unsortedArray, false);
-        AlgorithmHelper.startTime();
+        int[] unsortedArray = SortAlgorithmHelper.fillWithElements(10,1,10);
+        SortAlgorithmHelper.printArray(unsortedArray, false);
+        SortAlgorithmHelper.startTime();
         bogoSort(unsortedArray);
-        AlgorithmHelper.endTime();
-        AlgorithmHelper.printArray(unsortedArray, true);
-        AlgorithmHelper.printRuntime();
+        SortAlgorithmHelper.endTime();
+        SortAlgorithmHelper.printArray(unsortedArray, true);
+        SortAlgorithmHelper.printRuntime();
     }
 }

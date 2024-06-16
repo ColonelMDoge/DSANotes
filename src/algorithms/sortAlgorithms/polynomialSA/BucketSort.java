@@ -1,6 +1,6 @@
-package sortAlgorithms.polynomialSA;
+package algorithms.sortAlgorithms.polynomialSA;
 
-import sortAlgorithms.AlgorithmHelper;
+import algorithms.sortAlgorithms.*;
 
 /*
 The bucket sort algorithm is another interesting way to sort values
@@ -61,13 +61,13 @@ public class BucketSort {
         }
     }
     public static void main(String[] args) {
-        double[] unsortedArray = AlgorithmHelper.fillWithElements(1000,0.0,0.99);
-        AlgorithmHelper.printArray(unsortedArray, false);
-        AlgorithmHelper.startTime();
+        double[] unsortedArray = SortAlgorithmHelper.fillWithElements(1000,0.0,0.99);
+        SortAlgorithmHelper.printArray(unsortedArray, false);
+        SortAlgorithmHelper.startTime();
         bucketSort(unsortedArray);
-        AlgorithmHelper.endTime();
-        AlgorithmHelper.printArray(unsortedArray, true);
-        AlgorithmHelper.printRuntime();
+        SortAlgorithmHelper.endTime();
+        SortAlgorithmHelper.printArray(unsortedArray, true);
+        SortAlgorithmHelper.printRuntime();
     }
 }
 

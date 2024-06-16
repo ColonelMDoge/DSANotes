@@ -1,6 +1,6 @@
-package sortAlgorithms.loglinearSA;
+package algorithms.sortAlgorithms.loglinearSA;
 
-import sortAlgorithms.AlgorithmHelper;
+import algorithms.sortAlgorithms.*;
 
 /*
 The quick sort algorithm is a recursive divide and conquer method to sort an array using a pivot.
@@ -53,11 +53,11 @@ public class QuickSort { // "Last element is the pivot" strategy
         return i; // return the index of the correctly placed pivot
     }
     public static void main(String[] args) {
-        int[] unsortedArray = AlgorithmHelper.fillWithElements(1000,1,10);
-        AlgorithmHelper.printArray(unsortedArray, false);
-        AlgorithmHelper.startTime();
+        int[] unsortedArray = SortAlgorithmHelper.fillWithElements(1000,1,10);
+        SortAlgorithmHelper.printArray(unsortedArray, false);
+        SortAlgorithmHelper.startTime();
         quickSort(unsortedArray, 0 , unsortedArray.length - 1);
-        AlgorithmHelper.printArray(unsortedArray, true);
-        AlgorithmHelper.printRuntime();
+        SortAlgorithmHelper.printArray(unsortedArray, true);
+        SortAlgorithmHelper.printRuntime();
     }
 }

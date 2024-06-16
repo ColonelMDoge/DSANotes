@@ -1,6 +1,6 @@
-package sortAlgorithms.quadraticSA;
+package algorithms.sortAlgorithms.quadraticSA;
 
-import sortAlgorithms.AlgorithmHelper;
+import algorithms.sortAlgorithms.*;
 
 /*
 The bubble sort algorithm is one of the most well-known algorithms for being the easiest to understand
@@ -37,12 +37,13 @@ public class BubbleSort {
         }
     }
     public static void main(String[] args) {
-        int[] unsortedArray = AlgorithmHelper.fillWithElements(1000,1,10);
-        AlgorithmHelper.printArray(unsortedArray, false);
-        AlgorithmHelper.startTime();
+        int[] unsortedArray = SortAlgorithmHelper.fillWithElements(1000,1,10);
+        SortAlgorithmHelper.printArray(unsortedArray, false);
+        SortAlgorithmHelper.startTime();
         bubbleSort(unsortedArray);
-        AlgorithmHelper.endTime();
-        AlgorithmHelper.printArray(unsortedArray, true);
-        AlgorithmHelper.printRuntime();
+        SortAlgorithmHelper.endTime();
+        SortAlgorithmHelper.printArray(unsortedArray, true);
+        SortAlgorithmHelper.printRuntime();
+
     }
 }

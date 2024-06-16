@@ -1,7 +1,6 @@
-package sortAlgorithms.loglinearSA;
+package algorithms.sortAlgorithms.loglinearSA;
 
-import sortAlgorithms.AlgorithmHelper;
-
+import algorithms.sortAlgorithms.*;
 /*
 The heap sort algorithm is a well known sorting algorithm that uses the heap data structure to sort elements
 The heap binary tree ensures that the largest value is the root node, while its child nodes are less or equal to itself
@@ -57,12 +56,12 @@ public class HeapSort {
         }
     }
     public static void main(String[] args) {
-        int[] unsortedArray = AlgorithmHelper.fillWithElements(1000,1,10);
-        AlgorithmHelper.printArray(unsortedArray, false);
-        AlgorithmHelper.startTime();
+        int[] unsortedArray = SortAlgorithmHelper.fillWithElements(1000,1,10);
+        SortAlgorithmHelper.printArray(unsortedArray, false);
+        SortAlgorithmHelper.startTime();
         heapSort(unsortedArray);
-        AlgorithmHelper.endTime();
-        AlgorithmHelper.printArray(unsortedArray, true);
-        AlgorithmHelper.printRuntime();
+        SortAlgorithmHelper.endTime();
+        SortAlgorithmHelper.printArray(unsortedArray, true);
+        SortAlgorithmHelper.printRuntime();
     }
 }

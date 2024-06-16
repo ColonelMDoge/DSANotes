@@ -1,5 +1,6 @@
-package sortAlgorithms.polynomialSA;
+package algorithms.sortAlgorithms.polynomialSA;
 
+import algorithms.sortAlgorithms.*;
 /*
 The radix sort algorithm is another interesting way to sort an array
 It works by using each place value and sorting the individual columns (ones, tens, hundreds, etc)
@@ -18,8 +19,6 @@ It is a stable sort due to counting sort also being stable! (45a and 45b maintai
 Cons:
 Uses counting sort, so the cons of it apply here as well
  */
-
-import sortAlgorithms.AlgorithmHelper;
 
 public class RadixSort {
     public static int getMaxNum(int[] arr) {
@@ -51,12 +50,12 @@ public class RadixSort {
         }
     }
     public static void main(String[] args) {
-        int[] unsortedArray = AlgorithmHelper.fillWithElements(1000,1,10);
-        AlgorithmHelper.printArray(unsortedArray, false);
-        AlgorithmHelper.startTime();
+        int[] unsortedArray = SortAlgorithmHelper.fillWithElements(1000,1,10);
+        SortAlgorithmHelper.printArray(unsortedArray, false);
+        SortAlgorithmHelper.startTime();
         radixSort(unsortedArray);
-        AlgorithmHelper.endTime();
-        AlgorithmHelper.printArray(unsortedArray, true);
-        AlgorithmHelper.printRuntime();
+        SortAlgorithmHelper.endTime();
+        SortAlgorithmHelper.printArray(unsortedArray, true);
+        SortAlgorithmHelper.printRuntime();
     }
 }

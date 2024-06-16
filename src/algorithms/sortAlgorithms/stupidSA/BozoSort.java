@@ -1,6 +1,6 @@
-package sortAlgorithms.stupidSA;
+package algorithms.sortAlgorithms.stupidSA;
 
-import sortAlgorithms.AlgorithmHelper;
+import algorithms.sortAlgorithms.*;
 
 /*
 The bozo sort is another funky inefficient sorting algorithm relying on RNGesus
@@ -26,7 +26,7 @@ Takes the timespan of the sun to sort a large array
 
 public class BozoSort {
     public static void bozoSort(int[] array) {
-        while (!AlgorithmHelper.isSorted(array)) {
+        while (SortAlgorithmHelper.isSorted(array)) {
             // Get random indices and swap their elements
             int randomIndex1 = (int)(Math.random()*array.length);
             int randomIndex2 = (int)(Math.random()*array.length);
@@ -36,12 +36,12 @@ public class BozoSort {
         }
     }
     public static void main(String[] args) {
-        int[] unsortedArray = AlgorithmHelper.fillWithElements(10,1,10);
-        AlgorithmHelper.printArray(unsortedArray, false);
-        AlgorithmHelper.startTime();
+        int[] unsortedArray = SortAlgorithmHelper.fillWithElements(10,1,10);
+        SortAlgorithmHelper.printArray(unsortedArray, false);
+        SortAlgorithmHelper.startTime();
         bozoSort(unsortedArray);
-        AlgorithmHelper.endTime();
-        AlgorithmHelper.printArray(unsortedArray, true);
-        AlgorithmHelper.printRuntime();
+        SortAlgorithmHelper.endTime();
+        SortAlgorithmHelper.printArray(unsortedArray, true);
+        SortAlgorithmHelper.printRuntime();
     }
 }
